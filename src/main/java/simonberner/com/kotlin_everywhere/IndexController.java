@@ -27,10 +27,10 @@ public class IndexController {
     }
 
     @PostMapping
-    public String play(@RequestParam String userChoice) {
+    public String play(@RequestParam Choice userChoice) {
         // this is a mock implementation for now
 
-        RockPaperScissorsGame g = new RockPaperScissorsGame(null, userChoice, "Rock", 0L, 0L);
+        RockPaperScissorsGame g = new RockPaperScissorsGame(null, userChoice, Choice.Rock, 0L, 0L);
         gameRepository.save(g);
 
         return "redirect:/"; // redirect to `/`
