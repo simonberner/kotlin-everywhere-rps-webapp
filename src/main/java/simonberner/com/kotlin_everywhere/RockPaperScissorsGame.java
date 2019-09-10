@@ -1,11 +1,14 @@
 package simonberner.com.kotlin_everywhere;
 
+import lombok.Getter;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 @Entity
+@Getter
 public class RockPaperScissorsGame {
     @Id
     @GeneratedValue
@@ -30,27 +33,6 @@ public class RockPaperScissorsGame {
         this.userScore = userScore;
         this.computerScore = computerScore;
     }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getUserChoice() {
-        return userChoice;
-    }
-
-    public String getComputerChoice() {
-        return computerChoice;
-    }
-
-    public Long getUserScore() {
-        return userScore;
-    }
-
-    public Long getComputerScore() {
-        return computerScore;
-    }
-
 
     @Override
     public String toString() {
