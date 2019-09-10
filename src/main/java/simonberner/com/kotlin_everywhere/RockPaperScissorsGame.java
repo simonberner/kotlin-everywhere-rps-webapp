@@ -13,8 +13,8 @@ public class RockPaperScissorsGame {
     @Id
     @GeneratedValue
     private Long id;
-    private String userChoice;
-    private String computerChoice;
+    private Choice userChoice;
+    private Choice computerChoice;
     private Long userScore;
     private Long computerScore;
 
@@ -23,8 +23,8 @@ public class RockPaperScissorsGame {
 
     public RockPaperScissorsGame(
             @NotNull Long id,
-            @NotNull String userChoice,
-            @NotNull String computerChoice,
+            @NotNull Choice userChoice,
+            @NotNull Choice computerChoice,
             @NotNull Long userScore,
             @NotNull Long computerScore) {
         this.id = id;
